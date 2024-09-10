@@ -4,19 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href = "style1.css" rel = "stylesheet">
-    <title>Raphael Clark</title>
+    <title> Raphael Clark</title>
+    <link rel = "icon" href = "images/favicon.ico">
+    
+    <script> 
+        function toggleTheme() { 
+            // Obtains an array of all <link> 
+            // elements. 
+            // Select your element using indexing. 
+            var theme = document.getElementsByTagName('link')[0]; 
+  
+            // Change the value of href attribute  
+            // to change the css sheet. 
+            if (theme.getAttribute('href') == 'style1.css') { 
+                theme.setAttribute('href', 'style2.css');
+                localStorage.setItem("theme", 'style2.css')
+                
+            } else { 
+                theme.setAttribute('href', 'style1.css');
+                localStorage.setItem("theme", 'style1.css')
+            } 
+        }
+        window.onload = function() {
+            var theme = document.getElementsByTagName('link')[0]; 
+
+            var keptstyle = localStorage.getItem("theme");
+            if (!keptstyle) {
+                keptstyle = "style1.css";
+            }
+            theme.setAttribute('href', keptstyle);
+        }
+
+    </script>
+
 </head>
  <body > 
     
     
     <div class = "links" id = "links">
-        <a class = "linkedin" id = "linkedin" href = "https://www.linkedin.com/in/raphael-clark-394407304" target = "_blank"> <img height = "40px" src = "images/linkedIn.png"> </a> 
-        <a class = "github" id = "github" href = "https://github.com/RaffyEC" target = "_blank"> <img height = "40px"  src = "images/github.png">  </a>
+        <a class = "linkedin" id = "linkedin" href = "https://www.linkedin.com/in/raphael-clark-394407304" target = "_blank"> <img height = "40vh" src = "images/linkedIn.png"> </a> 
+        <a class = "github" id = "github" href = "https://github.com/RaffyEC" target = "_blank"> <img height = "40vh"  src = "images/github.png">  </a>
+    </div>
+
+    <div class = "swapStyle">
+        <button onclick="toggleTheme()"> <img src = "images/unoReverse.webp" height = "60vh"> </button>
     </div>
     
     <!-- HOME PAGE LINK -->
     <div class = "home-page-link" id = "homepageid">
-        <a class = "home"  id = "home" href = "https://people.tamu.edu/~rclark.co22/index.html"> <img height = "60px" src = "images/LogoRound.png"> </a>
+        <a class = "home"  id = "home" href = "https://people.tamu.edu/~rclark.co22/index.html"> <img height = "60vh" src = "images/LogoRound.png"> </a>
     </div>
     
     <!-- NAME -->
@@ -30,10 +66,51 @@
     
     <!-- NAVIGATION -->
     <div class = "main-nav" id = "main-nav">
-            <a class = "Qualifications" href = "https://people.tamu.edu/~rclark.co22/qualifications.html"> <img height = "90px" src = "images/resumeIcon.png"> </a>
-            <a class = "Portfolio" href = "https://people.tamu.edu/~rclark.co22/portfolio.html"> <img height = "90px" src = "images/projectsIcon.png"> </a>
-            <a class = "Services" href = "https://people.tamu.edu/~rclark.co22/services.html"> <img height = "90px" src = "images/services.png"> </a>
-            <a class = "AIPage" href = "https://people.tamu.edu/~rclark.co22/aiGenerated.html"> <img height = "85px" src = "images/aiIcon.png"> </a>
+            <a id = "Qualifications" href = "https://people.tamu.edu/~rclark.co22/qualifications.html"> <img height = "70vh" src = "images/resumeIcon.png"> </a>
+            <a id = "Portfolio" href = "https://people.tamu.edu/~rclark.co22/portfolio.html"> <img height = "70vh" src = "images/projectsIcon.png"> </a>
+            <a id = "Services" href = "https://people.tamu.edu/~rclark.co22/services.html"> <img height = "70vh" src = "images/services.png"> </a>
+            <a id = "AIPage" href = "https://people.tamu.edu/~rclark.co22/aiGenerated.html"> <img height = "70vh" src = "images/aiIcon.png"> </a>
     </div>
+
+    <div class = "slide">             
+                 <!-- Home page -->
+                    <div class = "box box--visible">
+                        <div class = "displayBox" id = "displayBox">
+                            <h2>Home page</h2>
+                            <p>A landing page for all of the links my website offers</p>
+                        </div>
+                    </div>
+                 
+                 <!-- Qualifications -->
+                     <div class = "box">
+                         <h2>Qualifications</h2>
+                         <p>A page that includes information like my resume, and a little more about me.</p>
+                     </div>
+ 
+                 <!-- Portfolio -->
+                     <div class = "box">
+                         <h2>Technical Portfolio</h2>
+                         <p>A page with my previous experrience and a some projects I have done</p>
+                     </div>
+ 
+                     <div class = "box">
+                         <h2>Services</h2>
+                         <p>A page that includes the things I do for my community as well as some things I do</p>
+                     </div>
+ 
+                     <div class = "box">
+                         <h2>AI Generated Page</h2>
+                         <p>A page that is generated by AI to show its html and css capabilities</p>
+                     </div>
+                <div class = "slide-arrow">
+                <button  id = "slide-left"> <img height = "30vh" id = "slide-left" src = "images/chevron.png"> </button>
+                <button  id = "slide-right"> <img height = "30vh" id = "slide-right" src = "images/chevronReversed.png"> </button>     
+                </div>
+            </div>
+
+    <script src = "scrollbar.js"></script>
+
 </body>
-</html>
+
+
+

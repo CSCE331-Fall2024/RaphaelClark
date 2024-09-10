@@ -3,10 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>AI Cat Meme Paradise</title>
+    <link rel="stylesheet" href="aiStyle.css">
+    <link rel = "icon" href = "images/favicon.ico">
 </head>
 <body>
-    <h1>AI GENERATION</h1>
-    <p>AI generated page goes here</p>
+    <div class = "home-page-link" id = "homepageid">
+        <a class = "home"  id = "home" href = "https://people.tamu.edu/~rclark.co22"> <img height = "60px" src = "images/LogoRound.png"> </a>
+    </div>
+    <div class = "links" id = "links">
+        <a class = "linkedin" id = "linkedin" href = "https://www.linkedin.com/in/raphael-clark-394407304" target = "_blank"> <img height = "40px" src = "images/linkedIn.png"> </a> 
+        <a class = "github" id = "github" href = "https://github.com/RaffyEC" target = "_blank"> <img height = "40px"  src = "images/github.png">  </a>
+    </div>
+
+    <div class = "swapStyle">
+        <button onclick="toggleTheme()"> <img src = "images/unoReverse.webp" height = "60vh"> </button>
+    </div>
+    
+        <header>
+            <h1>Cat Meme Paradise</h1>
+        </header>
+    
+        <main>
+            <section id="meme-gallery">
+                <h2>Funny Cat Memes</h2>
+                <div class="meme-container" id="meme-container">
+                    <!-- Memes will be dynamically inserted here -->
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Cat Meme Paradise</p>
+        </footer>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const memeContainer = document.getElementById('meme-container');
+    
+                fetch('memes.json')
+                    .then(response => response.json())
+                    .then(memes => {
+                        memes.forEach(meme => {
+                            const memeDiv = document.createElement('div');
+                            memeDiv.className = 'meme-item';
+    
+                            const img = document.createElement('img');
+                            img.src = meme.url;
+                            img.alt = 'Funny Cat Meme';
+    
+                            const caption = document.createElement('p');
+                            caption.textContent = meme.caption || "Funny Cat Meme";
+    
+                            memeDiv.appendChild(img);
+                            memeDiv.appendChild(caption);
+    
+                            memeContainer.appendChild(memeDiv);
+                        });
+                    })
+                    .catch(error => console.error('Error loading memes:', error));
+            });
+        </script>
+
 </body>
 </html>

@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link href = "style1.css" rel = "stylesheet">
+    <link rel = "icon" href = "images/favicon.ico">
+    <script> 
+        function toggleTheme() { 
+            // Obtains an array of all <link> 
+            // elements. 
+            // Select your element using indexing. 
+            var theme = document.getElementsByTagName('link')[0]; 
+  
+            // Change the value of href attribute  
+            // to change the css sheet. 
+            if (theme.getAttribute('href') == 'style1.css') { 
+                theme.setAttribute('href', 'style2.css');
+                localStorage.setItem("theme", 'style2.css')
+                
+            } else { 
+                theme.setAttribute('href', 'style1.css');
+                localStorage.setItem("theme", 'style1.css')
+            } 
+        }
+        window.onload = function() {
+            var theme = document.getElementsByTagName('link')[0]; 
+
+            var keptstyle = localStorage.getItem("theme");
+            if (!keptstyle) {
+                keptstyle = "style1.css";
+            }
+            theme.setAttribute('href', keptstyle);
+        }
+
+    </script>
 
 </head>
 <body>
@@ -15,90 +45,102 @@
         <a class = "linkedin" id = "linkedin" href = "https://www.linkedin.com/in/raphael-clark-394407304" target = "_blank"> <img height = "40px" src = "images/linkedIn.png"> </a> 
         <a class = "github" id = "github" href = "https://github.com/RaffyEC" target = "_blank"> <img height = "40px"  src = "images/github.png">  </a>
     </div>
+    <div class = "swapStyle">
+        <button onclick="toggleTheme()"> <img src = "images/unoReverse.webp" height = "60vh"> </button>
+    </div>
     <div class = "names" id = "name"> 
         <h1>PROJECTS</h1>
     </div>
-    <div class = "Projects">
-        <span class = "ProjectsText">
-        <h2>C-Plus-Plus Projects</h2>
-            <h3>Dungeon Crawler</h3>
-                <p class = "ProjectsP">
-                    This was a project where 
-                    I made a command line puzzle 
-                    video game in which you are trying 
-                    to escape a maze of monsters, 
-                    I used 2D array manipulation as well 
-                    as state checking and matrix math to 
-                    impliment many of the features of the game. 
-                    It was a fun project overall and took some time to complete, but I feel like it is very 
-                    fulfilling to create a project that is interactive like this
-                </p >
-            <h3>std::Vector</h3>
-                <p class = "ProjectsP">
-                    In this project I recreated the std::vector class using dynamic arrays.
-                </p>
-            <h3>std::unordered_map</h3>
-                <p class = "ProjectsP">
-                    In this project I recreated the std::unordered_map class using vectors, hashing, and iterators.
-                </p>
-            <h3>std::linked_list</h3>
-                <p class = "ProjectsP">
-                    In this project I recreated the Linked List include using connected pointers and some math.
-                </p>
-            <h3>std::graph</h3>
-                <p class = "ProjectsP">
-                    In this project I recreated the unordered and ordered graph classes using something simaler to linked lists but with more than one connection.
-                </p>
-            <h3>PriorityQueue</h3>
-                <p class = "ProjectsP">
-                    In this project and another like it I recreated a stack class, a queue class, and a priority queue class
-                </p>
-        </span>
+
+    <!-- DUNGEON CRAWL -->
+    <div class = "holder">
+    <div  class = "DungeonCrawl">
+        <img id = "DungeonImg" src = "images/dungeonCrawlerImg.png">
+        <h3>Dungeon Crawler</h3>        
+        <p>
+            This was a project where 
+            I made a command line puzzle 
+            video game in which you are trying 
+            to escape a maze of monsters, 
+            I used 2D array manipulation as well 
+            as state checking and matrix math to 
+            impliment many of the features of the game. 
+            It was a fun project overall and took some time to complete, but I feel like it is very 
+            fulfilling to create a project that is interactive like this
+        </p >
     </div>
 
-    <div class = "Projects">
-        <span class = "ProjectsText">
-            <h2>Ocaml</h2>
-                <h3>Coding with Functional Programming</h3>
-                    <p>
-                        In this coding language, I made a few projects that 
-                        implimented a lot of the key features of functional programming using recursion.
-                        I made functions that utilized recursion, pairs and higher order objet types, folding, mapping, and filters.
-                        I created functions that could pass through higher order functions as well as use first class functions.
-                        I also created combining functions that ustilized all of these things to make some amazing functions with cool utilities.
-
-                    </p>
-        </span>
+    <!-- STD::CLASSES -->
+    <div  class = "STDCLASS">
+        <h2>Standard Classes</h2>
+        <h3>std::Vector</h3>
+            <p>
+                In this project I recreated the std::vector class using dynamic arrays.
+            </p>
+        <h3>std::unordered_map</h3>
+            <p>
+                In this project I recreated the std::unordered_map class using vectors, hashing, and iterators.
+            </p>
+        <h3>std::linked_list</h3>
+            <p>
+                In this project I recreated the Linked List include using connected pointers and some math.
+            </p>
+        <h3>std::graph</h3>
+            <p>
+                In this project I recreated the unordered and ordered graph classes using something simaler to linked lists but with more than one connection.
+            </p>
+        <h3>PriorityQueue</h3>
+            <p>
+                In this project and another like it I recreated a stack class, a queue class, and a priority queue class.
+            </p>
+    </div>
     </div>
 
-    <div class = "Projects">
-        <span class = "ProjectsText">
-            <h2>Racket</h2>
-                <h3>Streams, Sequences, Cycles, and Assoc</h3>
-                    <p>
-                        One of my first projects in Racket was utilizing Streams, Sequences, Cycles, and an Assoc (finds something)
-                        and creating them from scratch with simple functional programming in Racket
-                    </p>
-                <h3>Making a Programming Language Interpreter</h3>
-                    <p>
-                        In this project I made something that I consider to be one of the most difficult and entertaining things I have ever created. 
-                        A MUPL, or a made up programming language is something that uses a current language to make a new language with its own syntax and tokens, 
-                        but using the foundation of another language. This was Racket for me. In the end, my programming language could recognize all the basic variable types
-                        in addition to being able to recognize things like functions, classes, and environments. the language could use higher order functions, and fold, map, and filter things.
-                        It was a great endeavor and a difficult project but was very fun and incitefull. 
-                    </p>
-        </span>
+    <div class = "holder">
+    <div class = OCAML>
+        <img id = OCAMLIMG src = "images/OcamlImg1.png">
+        <h3>Coding with Functional Programming in Ocaml</h3>
+            <p>
+                In this coding language, I made a few projects that 
+                implimented a lot of the key features of functional programming using recursion.
+                I made functions that utilized recursion, pairs and higher order objet types, folding, mapping, and filters.
+                I created functions that could pass through higher order functions as well as use first class functions.
+                I also created combining functions that ustilized all of these things to make some amazing functions with cool utilities.
+
+            </p>
     </div>
 
-    <div class = "Projects">
-        <span class = "ProjectsText">
-            <h2>Ruby</h2>
-                <h3>Tetris</h3>
-                <p>
-                    In this project in Ruby I studied class hierarchy and used it to make add ons and recreate a beloved game known as Tetris.
-                    It was a very fun project, most video games are, and I found it very entertaining to make something as fun as it.
-                </p>
-        </span>
+    <div class = "RACKET">
+        <h3>Streams, Sequences, Cycles, and Assoc in Racket</h3>
+            <p>
+                One of my first projects in Racket was utilizing Streams, Sequences, Cycles, and an Assoc (finds something)
+                and creating them from scratch with simple functional programming in Racket
+            </p>
+        <h3>Making a Programming Language Interpreter in Racket</h3>
+            <img id = "RACKETIMG1" src = "images/newLanguageImg1.png">
+            <img id = "RACKETIMG2" src = "images/newLanguageImg2.png">
+            <p>
+                    In this project I made something that I consider to be one of the most difficult and entertaining things I have ever created. 
+                    A MUPL, or a made up programming language is something that uses a current language to make a new language with its own syntax and tokens, 
+                    but using the foundation of another language. This was Racket for me. In the end, my programming language could recognize all the basic variable types
+                    in addition to being able to recognize things like functions, classes, and environments.<br> the language could use higher order functions, and fold, map, and filter things.
+                    It was a great endeavor and a difficult project but was very fun and incitefull. 
+            </p>
+    </div>
+    </div>
+
+    <div class = "RUBY">
+        <div class = "RUBYIMGContainer">
+            <img id = "RUBYIMG" src = "images/rubyImg1.png">
+            <img id = "RUBYIMG" src = "images/rubyImg2.png">
+            <img id = "RUBYIMG" src = "images/rubyImg3.png">
+        </div>
+        <h3>Tetris in Ruby</h3>
+            <p>
+                In this project in Ruby I studied class hierarchy and used it to make add ons and recreate a beloved game known as Tetris.
+                It was a very fun project, most video games are, and I found it very entertaining to make something as fun as it. Some parts were challenging,
+                but I would say that the most entertaining pieces that I created were a shadow block class, music, and redesigning the graphical layout.
+            </p>
     </div>
 </body>
 </html>

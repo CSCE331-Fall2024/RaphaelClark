@@ -5,7 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESUME</title>
     <link href = "style1.css" rel = "stylesheet">
+    <link rel = "icon" href = "images/favicon.ico">
+    <script> 
+        function toggleTheme() { 
+            // Obtains an array of all <link> 
+            // elements. 
+            // Select your element using indexing. 
+            var theme = document.getElementsByTagName('link')[0]; 
+  
+            // Change the value of href attribute  
+            // to change the css sheet. 
+            if (theme.getAttribute('href') == 'style1.css') { 
+                theme.setAttribute('href', 'style2.css');
+                localStorage.setItem("theme", 'style2.css')
+                
+            } else { 
+                theme.setAttribute('href', 'style1.css');
+                localStorage.setItem("theme", 'style1.css')
+            } 
+        }
+        window.onload = function() {
+            var theme = document.getElementsByTagName('link')[0]; 
 
+            var keptstyle = localStorage.getItem("theme");
+            if (!keptstyle) {
+                keptstyle = "style1.css";
+            }
+            theme.setAttribute('href', keptstyle);
+        }
+
+    </script>
 </head>
 <body>
     <div class = "home-page-link" id = "homepageid">
@@ -17,23 +46,77 @@
         <a class = "github" id = "github" href = "https://github.com/RaffyEC" target = "_blank"> <img height = "40px"  src = "images/github.png">  </a>
     </div>
 
+    <div class = "swapStyle">
+        <button onclick="toggleTheme()"> <img src = "images/unoReverse.webp" height = "60vh"> </button>
+    </div>
+
+    <div class = "insta">
+        <a href = "https://www.instagram.com/raffyc2003?igsh=MTJhN3N2d292MWllMQ==" target="_blank"> <img src="images/insta.png" height = "40vh"> </a>
+    </div>
+
+    <div class = "gmail">
+        <a target="_blank" href = "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtDkwpPZGLlMGJSlXbWfBTBgvzDvCWCjBRbJMDVkvMRKnnMlqkbnPHkZlwqvHCkDjwZdJFRG"> <img src = "images/gmail.png" height = "40vh"> </a>
+    </div>
+
+    <div class = "discord">
+        <a target="_blank" href ="https://discord.com/users/big_raff"> <img src = "images/Discord-Logo.png" height = "40vh"> </a>
+    </div>
+    
     <div class = "name" id= "name">   
         <h1>QUALIFICATIONS</h1>
+    </div>    
+
+    <div class = holder>
+    <div class = "RESUME">
+        <h2>RESUME</h2>
+        <p>
+            This is where I have a link to my resume, 
+            it holds information like my previous experrience, 
+            more about some of the projects that I have accomplished, 
+            and a little more about me.
+            If you want to see it, click Resume 
+            Icon that is displayed near this text.
+        </p>
+        <a   target="_blank" href = "Resume_Clark_Raphael.pdf"> <img id = "RESUMELINK" src = "images/resumeIcon.png"> </a>
     </div>
-    <h3>RESUME</h3>
 
-    <!-- <iframe class = "ResumePDF" src="images/Resume_Clark_Raphael.pdf" frameborder="0"> -->
-    <!-- <embed class="ResumePDF" 
-               src=
-            "Resume_Clark_Raphael.pdf"
-            width="800" height="500">
+    <div class = "LZT">
+        <a href = "https://www.lzt.biz/home.html" target = "_blank"> <img id = "LZTIMG" src = "images/lzTechImage.png"> </a>
+        <h2>LZ-Technologies Inc.</h2>
+        <p>
+            LZ-Technologies is where I had my first internship. They are a Technology Development Contractor 
+            company that works with NASA and many interns for the future of technology. In the past few summers 
+            that I was here, I worked on and developed numerous pieces of software ranging on topics from signal-decoders, displays, data-transfer and organization software and much more.
+            A signifigant portion of the internship was also spent debugging and helping to fix and sometimes start new projects. Click on the image to go to their site.
+        </p>
+    </div>
 
-    </embed> -->
-    <object class="ResumePDF" 
-            data=
-            "https://1drv.ms/b/c/d2e9e716481947a0/IQPyiglIYn6FRrwETUY8pW9lAfSaunrnF0apjTOPtgvv73I"
-            width="800"
-            height="500">
-    </object>
-    <!-- <iframe class = "ResumePDF" src="https://1drv.ms/b/c/d2e9e716481947a0/IQPyiglIYn6FRrwETUY8pW9lAfSaunrnF0apjTOPtgvv73I" width="98" height="120" frameborder="0" scrolling="no"></iframe> </body> -->
-</html>
+    <div class = TAMUPT>
+        <h2>Texas A&M Peer Teacher for ENGR102</h2>
+        <a href = "https://engineering.tamu.edu/cse/academics/peer-teachers/index.html" target="_blank"><img id = "TAMUIMG" src = "images/tamuImg.png"></a>
+        <p>
+            Currently my job during the semesters is a Texas A&M peer Teacher for Engineering 102, a Python development course.
+            In this job, what I do is help the students with any of there python related questions, or debuggin help.
+            In the later semesters in the year this also includes helping students with basic physics and kinematics. Click on the Image to go to the PT website.
+        </p>
+    </div>
+    </div>
+
+
+    <div class = "ABOUT">
+        
+        <img src = "images/raphaelClark.jpg" id = ABOUTIMG>
+        <img id = "ABOUTIMG" src = "images/cloud.jpg"> 
+        <img id = "ABOUTIMG" src = "images/storm.jpg">
+        <br>
+        <h2>About Me</h2>
+        <br>
+        <p>
+            My name is Raphael Clark, a class of 2026 junior at Texas A&M. I have two cats, Cloud and Storm, and one dog, Einstein.
+            I was born and raised in Texas, love food, lifting weight, board games, D&D, video games, and programming.
+        </p>
+
+
+
+    </div>
+    </html>

@@ -1,0 +1,56 @@
+/* Base dark theme styles */
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+main {
+    padding: 20px;
+}
+
+.meme-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.meme-item {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.meme-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.meme-item p {
+    color: #ffcc00;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

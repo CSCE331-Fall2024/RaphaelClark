@@ -2,21 +2,27 @@
 /* LANDING PAGE  */
 /* ************* */
 #linkedin {
-    position: Absolute; top: 5px; right: 5px;
+    position: Absolute; top: 7vh; left: 1vw;
     opacity: 1;
   }
 #github {
-    position: Absolute; top: 5px; right: 50px;
+    position: Absolute; top: 12vh; left: 1vw;
     opacity: 1;
 }
 
-.swapStyle {
-  position: Absolute; top: 5px; right: 100px;
-  opacity: 1;
+.home {
+    margin-left: -1vw;
+    margin-top: -10vh;
 }
+
+.swapStyle {
+    position: Absolute; top: 16vh; left: 1vw;
+    border: -2vw solid #000;
+}
+
 body, html {
   /* The image used */
-  background-image: url("images/beach.jpg");
+  background-image: url("images/paintSplatter.jpg");
 
   /* Full height */
   height: 100%;
@@ -39,13 +45,13 @@ body, html {
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
-    background-image: url("images/backgroundSmall.gif");  
+    background-image: url("images/paintGif.gif");  
 }
 #description {
-    background-color : grey;
+    background-color : rgba(235, 192, 225, 0.7);
     width: 50%;
     height:  50 px;
-    border: 2px solid #000;
+    border: 3px solid #000;
     border-radius: 10px;
     padding: 20px;
     opacity: .5;
@@ -61,12 +67,12 @@ h1 {
 }
 /* MAIN NAV */
 .main-nav > a  {
-    margin: 3vw;  
+    margin: 1vh;  
 }
 .main-nav {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: auto;
+   margin-right:97vw;
+    margin-top: -10vh;
+    margin-left: -1vw;
 }
 /* ********************************* */
 /* CAROUSELL NAV */
@@ -82,7 +88,8 @@ h1 {
   border-radius: 10px;
   width:70vw;
   height: 20vh;
-  background: rgba(3, 3, 50, .7);
+  background: rgba(235, 192, 225, 0.7);
+  border: 3px solid #000;
   padding: 1rem;
   margin-left: 10vw;
   margin-right: 10vw;
@@ -102,13 +109,13 @@ h1 {
   opacity: .3;
 }
 .box h2 {
-  color:rgb(181, 181, 197, 1);
+  color:rgb(0, 0, 0);
   font-family: 'Lucida Sans';
   font-size: large;
   font-weight: bold;
 }
 .box p {
-  color:rgb(181, 181, 197, 1);
+  color:rgb(0, 0, 0);
   font-family: 'Lucida Sans';
   font-size: small;
 }
@@ -156,15 +163,12 @@ h1 {
 .RESUME {
   background: rgba(3, 3, 50, .7);
   /* display: inline-block; */
-  width: 80vw;
+  width: 30vw;
   height: 20vh;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
   /* opacity: .5; */
-  margin-left: 5vw;
-  margin-right: 30vw;
-  margin-top: 2vh;
   transition: .5s;
 }
 .RESUME h2{
@@ -196,18 +200,20 @@ h1 {
   font-size: small;
 }
 
+.holder{
+    display: inline-flex;
+    margin-top: 5vh;
+}
+
 .LZT {
   background: rgba(8, 81, 71, 0.7);
-  /* display: inline-block; */
-  width: 80vw;
-  height: 25vh;
+  display: inline-block;
+  width: 30vw;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
   /* opacity: .5; */
-  margin-left: 5vw;
-  margin-right: 30vw;
-  margin-top: 2vh;
+ 
   transition: .5s;
 }
 .LZT h2{
@@ -245,15 +251,13 @@ h1 {
 .TAMUPT {
   background: rgba(40, 31, 31, 0.7);
   /* display: inline-block; */
-  width: 80vw;
+  width: 30vw;
   height: 22vh;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
   /* opacity: .5; */
-  margin-left: 5vw;
-  margin-right: 30vw;
-  margin-top: 2vh;
+
   transition: .5s;
 }
 .TAMUPT h2{
@@ -269,7 +273,7 @@ h1 {
 #TAMUIMG {
   border: 2px solid rgb(73, 26, 26);
   border-radius: 10px;
-  width: 20rem;
+  width: 10rem;
   float: left;
   margin-right: 2vw;
   margin-bottom: 2vw;
@@ -351,19 +355,18 @@ h1 {
 
 /* DUNGEON CRAWL */
 .DungeonCrawl {
-  background: rgba(3, 3, 50, .7);
-  display: inline-block;
+  background: rgba(235, 192, 225, 0.7);
+  width: 45vw;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
   /* opacity: .5; */
-  margin-left: 5vw;
-  margin-right: 30vw;
+
   margin-top: 2vh;
   transition: .5s;
 }
 #DungeonImg {
-  border: 2px solid rgba(115, 37, 164, .8);
+  border: 2px solid rgba(146, 13, 106, 0.8);
   border-radius: 10px;
   height: 20vh;
   float: left;
@@ -371,13 +374,13 @@ h1 {
   margin-bottom: 2vw;
 }
 .DungeonCrawl h3{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: large;
   font-weight: bold;
 }
 .DungeonCrawl p {
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: small;
 }
@@ -389,38 +392,37 @@ h1 {
   color: #bd7de8;
   box-shadow: 0 0 8px #f1d0d0;
   text-shadow: 0 0 6px #ab70c6;
-  background-color: rgb(37, 20, 44);
+  background-color: rgb(171, 48, 220);
   border-radius: 20px;
   border: 8px solid rgb(239, 152, 161)
 }
 
 /* Standard Classes */
 .STDCLASS {
-  background: rgba(3, 3, 50, .7);
-  display: inline-block;
+  background: rgba(235, 192, 225, 0.7);
+  width: 45vw;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
   /* opacity: .5; */
-  margin-left: 45vw;
-  margin-right: 5vw;
+
   margin-top: 2vh;
   transition: .5s;
 }
 .STDCLASS h2{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: larger;
   font-weight: bold;
 }
 .STDCLASS h3{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: large;
   font-weight: bold;
 }
 .STDCLASS p {
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: small;
 }
@@ -432,7 +434,7 @@ h1 {
   color: #bd7de8;
   box-shadow: 0 0 8px #f1d0d0;
   text-shadow: 0 0 6px #ab70c6;
-  background-color: rgb(37, 20, 44);
+  background-color: rgb(171, 48, 220);
   border-radius: 20px;
   border: 8px solid rgb(239, 152, 161)
 }
@@ -440,19 +442,18 @@ h1 {
 /* Ocaml Classes */
 
 .OCAML {
-  background: rgba(3, 3, 50, .7);
-  display: inline-block;
+  background: rgba(235, 192, 225, 0.7);
+  width: 45vw;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
   /* opacity: .5; */
-  margin-left: 5vw;
-  margin-right: 30vw;
+
   margin-top: 2vh;
   transition: .5s;
 }
 #OCAMLIMG {
-  border: 2px solid rgba(115, 37, 164, .8);
+  border: 2px solid rgba(146, 13, 106, 0.8);
   border-radius: 10px;
   height: 20vh;
   float: left;
@@ -460,13 +461,13 @@ h1 {
   margin-bottom: 2vw;
 }
 .OCAML h3{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: large;
   font-weight: bold;
 }
 .OCAML p {
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: small;
 }
@@ -478,7 +479,7 @@ h1 {
   color: #bd7de8;
   box-shadow: 0 0 8px #f1d0d0;
   text-shadow: 0 0 6px #ab70c6;
-  background-color: rgb(37, 20, 44);
+  background-color: rgb(171, 48, 220);
   border-radius: 20px;
   border: 8px solid rgb(239, 152, 161)
 }
@@ -486,27 +487,26 @@ h1 {
 
 /* RACKET Classes */
 .RACKET {
-  background: rgba(3, 3, 50, .7);
-  display: inline-block;
+  background: rgba(235, 192, 225, 0.7);
+  width: 45vw;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
   /* opacity: .5; */
-  margin-left: 30vw;
-  margin-right: 5vw;
+
   margin-top: 2vh;
   transition: .5s;
 }
 #RACKETIMG1 {
-  border: 2px solid rgba(115, 37, 164, .8);
+  border: 2px solid rgba(146, 13, 106, 0.8);
   border-radius: 10px;
-  height: 20vh;
+  width: 35rem;
   float:inline-end;
   margin-right: 2vw;
   margin-bottom: 2vw;
 }
 #RACKETIMG2 {
-  border: 2px solid rgba(115, 37, 164, .8);
+  border: 2px solid rgba(146, 13, 106, 0.8);
   border-radius: 10px;
   height: 20vh;
   float: inline-end;
@@ -515,13 +515,13 @@ h1 {
   margin-bottom: 2vw;
 }
 .RACKET h3{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: large;
   font-weight: bold;
 }
 .RACKET p {
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: small;
 }
@@ -533,14 +533,14 @@ h1 {
   color: #bd7de8;
   box-shadow: 0 0 8px #f1d0d0;
   text-shadow: 0 0 6px #ab70c6;
-  background-color: rgb(37, 20, 44);
+  background-color: rgb(171, 48, 220);
   border-radius: 20px;
   border: 8px solid rgb(239, 152, 161)
 }
 
 /* RUBY */
 .RUBY {
-  background: rgba(3, 3, 50, .7);
+  background: rgba(235, 192, 225, 0.7);
   display: inline-block;
   border: 2px solid #000;
   border-radius: 10px;
@@ -553,7 +553,7 @@ h1 {
   transition: .5s;
 }
 #RUBYIMG {
-  border: 2px solid rgba(115, 37, 164, .8);
+  border: 2px solid rgba(146, 13, 106, 0.8);
   border-radius: 10px;
   height: 20vh;
   float: inline-start;
@@ -564,13 +564,13 @@ h1 {
   float: inline-start;
 }
 .RUBY h3{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: large;
   font-weight: bold;
 }
 .RUBY p {
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: small;
 }
@@ -582,7 +582,7 @@ h1 {
   color: #bd7de8;
   box-shadow: 0 0 8px #f1d0d0;
   text-shadow: 0 0 6px #ab70c6;
-  background-color: rgb(37, 20, 44);
+  background-color: rgb(171, 48, 220);
   border-radius: 20px;
   border: 8px solid rgb(239, 152, 161)
 }
@@ -591,7 +591,7 @@ h1 {
 
 /* SERVICES */
 .SERVICE {
-  background: rgba(3, 3, 50, .7);
+  background: rgba(235, 192, 225, 0.7);
   display: inline-block;
   border: 2px solid #000;
   border-radius: 10px;
@@ -603,13 +603,13 @@ h1 {
   transition: .5s;
 }
 .SERVICE h2{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: larger;
   font-weight: bold;
 }
 .SERVICE h3{
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: large;
   font-weight: bold;
@@ -622,29 +622,31 @@ h1 {
   color: #bd7de8;
   box-shadow: 0 0 8px #f1d0d0;
   text-shadow: 0 0 6px #ab70c6;
-  background-color: rgb(37, 20, 44);
+  background-color: rgb(171, 48, 220);
   border-radius: 20px;
   border: 8px solid rgb(239, 152, 161)
 }
 .SERVICE p {
-  color:rgb(181, 181, 197, 1);
+  color:black;
   font-family: 'Lucida Sans';
   font-size: small;
 }
+
+.serviceLinks {
+  display:block;
+  margin-top:17vh;
+  margin-right: 95vw;
+}
+
 .insta {
-  margin-left: 6vw;
+  margin-left: 5vw;
   margin-top: -4vh;
 }
 .gmail {
-  margin-left: 11vw;
-  margin-top: -4vh;
+  margin-left: 10vw;
+  margin-top: -4vh
 }
 .discord {
   margin-left: 15vw;
-  margin-top: -3vh
-}
-.serviceLinks {
-  display:block;
-  margin-top:-4vh;
-  margin-left: 7vw;
+  margin-top: -4vh
 }
